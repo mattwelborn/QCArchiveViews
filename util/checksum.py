@@ -3,7 +3,7 @@ import sys
 import pydantic
 
 class MetaBlob(pydantic.BaseModel):
-    blake2b: str
+    blake2b_checksum: str
 
 b2b = hashlib.blake2b()
 with open(sys.argv[1], 'rb') as f:
